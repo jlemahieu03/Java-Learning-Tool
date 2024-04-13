@@ -58,9 +58,9 @@ public class Driver{
         if (num==1){
             Chapter ch1=new Chapter(1,"https://www.coursera.org/articles/what-is-python-used-for-a-beginners-guide-to-using-python",new String[3]);
             Chapter ch2=new Chapter(2,"https://www.geeksforgeeks.org/python-language-advantages-applications/",new String[3]);
-            Chapter ch3=new Chapter(3,"https://www.geeksforgeeks.org/python-program-to-print-hello-world/",new String[] {"IDE suggestions: Thonny,Pycharm,IDLE","",""});
+            Chapter ch3=new Chapter(3,"https://www.geeksforgeeks.org/python-program-to-print-hello-world/", new String[3]);
             Quiz quiz=new Quiz();
-            quiz.addQuestion(new Question("What can Python be used for?","A: Data Science","B: Software and Web Development","C: Automation", "D: All of the above"));
+            quiz.addQuestion(new Question("What can Python be used for?","A: Data Science","B: Software and Web Development","C: Automation", "D: All of the above",3));
             Module module1=new Module(ch1,ch2,ch3,quiz);
             return module1;
         }
