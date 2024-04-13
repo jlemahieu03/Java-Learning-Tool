@@ -42,4 +42,9 @@ public class Question {
         }
         return s;
     }
+    @Override
+    public boolean equals(Object other){
+        Question qOther=(Question)other;
+        return this.question.equals(qOther.question);
+    }
 }
