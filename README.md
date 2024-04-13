@@ -23,6 +23,6 @@ Modules:
   - Main Function versus classes: https://www.w3schools.com/java/java_class_methods.asp
   - Inheritance: https://www.geeksforgeeks.org/inheritance-in-java/
 - Loops and Conditionals
-  - If/Else/Else If Statements: https://www.javatpoint.com/branching-statements-in-java#:~:text=Java%20has%20mainly%20three%20branching,used%20with%20the%20control%20statements.
+  - If/Else/Else If Statements: https://www.w3schools.com/java/java_conditions.asp //this is the link that i changed!
   - For Loops: https://www.w3schools.com/java/java_for_loop.asp
   - While Loops: https://www.javatpoint.com/java-while-loop
