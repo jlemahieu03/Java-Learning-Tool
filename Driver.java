@@ -81,6 +81,13 @@ public class Driver{
             Chapter ch2=new Chapter(2,"https://www.geeksforgeeks.org/variables-in-java/",new String[3]);
             Chapter ch3=new Chapter(3,"https://www.javatpoint.com/array-in-java", new String[3]);
             Quiz quiz=new Quiz();
+
+            quiz.addQuestion(new Question("What does the boolean data type represent in Java?","A: Whole numbers","B: Floating point numbers","C: True or false values", "D: Characters",2));
+            quiz.addQuestion(new Question("Which group of data types includes String, Arrays, and Classes?","A: Primitive data types","B: Non-primitive data types","C: Integer data types", "D: Relational numbers",1));
+            quiz.addQuestion(new Question("What is the purpose of a variable in Java?","A: To define functions","B: To store data values during program execution","C: To create classes and objects", "D: To perform mathematical calculations",1));
+            quiz.addQuestion(new Question("What is the purpose of a Java array?","A: To define functions","B: To store elements of different data types","C: To store elements of a similar data type", "D: To create classes and objects",2));
+            quiz.addQuestion(new Question("How do you declare an array of ints in Java?","A: int[] arr;","B: arr[] int;","C: int arr[];", "D: All of the above",0));
+
             Module module2=new Module(ch1,ch2,ch3,quiz);
             return module2;
         }
@@ -89,6 +96,14 @@ public class Driver{
             Chapter ch2=new Chapter(2,"https://www.w3schools.com/java/java_class_methods.asp",new String[3]);
             Chapter ch3=new Chapter(3,"https://www.geeksforgeeks.org/inheritance-in-java/", new String[3]);
             Quiz quiz=new Quiz();
+
+            quiz.addQuestion(new Question("What does the void keyword indicate in a method declaration?","A: The method returns a value","B: The method has no parameters","C: The method does not return a value", "D: The method is private",2));
+            quiz.addQuestion(new Question("What is the purpose of creating your own methods in Java?","A: To reuse code","B: To define variables","C: To create loops", "D: To handle exceptions",0));
+            quiz.addQuestion(new Question("What is the key difference between static methods and public methods?","A: Static methods can be called without creating objects, while public methods require object creation","B: Static methods are private, while public methods are accessible globally","C: Static methods have parameters, while public methods do not", "D: Static methods are slower than public methods",0));
+            quiz.addQuestion(new Question("What is the purpose of a Java class method?","A: To define functions","B: To store data","C: To perform certain actions related to the class", "D: To create objects",2));
+            quiz.addQuestion(new Question("What is the purpose of inheritance in Java?","A: To define functions","B: To store data","C: To perform certain actions", "D: To allow one class to inherit features from another class",3));
+            quiz.addQuestion(new Question("Which keyword is used to indicate inheritance in Java?","A: extends","B: implements","C: inherits", "D: inheritsFrom",0));
+
             Module module3=new Module(ch1,ch2,ch3,quiz);
             return module3;
         }
@@ -97,6 +112,13 @@ public class Driver{
             Chapter ch2=new Chapter(2,"https://www.w3schools.com/java/java_for_loop.asp",new String[3]);
             Chapter ch3=new Chapter(3,"https://www.javatpoint.com/java-while-loop", new String[3]);
             Quiz quiz=new Quiz();
+
+            quiz.addQuestion(new Question("What is the purpose of branching statements in Java?","A: To define functions","B: To store data","C: To perform certain actions", "D: To jump the flow of execution within a program",3));
+            quiz.addQuestion(new Question("Which branching statement is used to terminate a loop based on a certain condition?","A: continue","B: break","C: return", "D: switch",1));
+            quiz.addQuestion(new Question("What is the advantage of a for loop in Java?","A: To execute a block of code a certain number of times","B: To execute a block of code while some condition is true","C: To define functions", "D: To create classes and objects",0));
+            quiz.addQuestion(new Question("What is the condition in a while loop?","A: The code to be executed","B: The increment/decrement statement","C: The expression to be tested", "D: The initialization of loop variables",2));
+            quiz.addQuestion(new Question("How does the do-while loop differ from the while loop?","A: The do-while loop executes only if the condition is true","B: The do-while loop always executes at least once","C: The do-while loop is an entry control loop", "D: The do-while loop is used for infinite iterations",1));
+
             Module module4=new Module(ch1,ch2,ch3,quiz);
             return module4;
         }
