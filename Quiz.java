@@ -54,9 +54,8 @@ public class Quiz {
 
     }
 
-    public void addQuestion(String question, String an1, String an2, String an3, String an4, int anIn) {
-        Question newQuestion = new Question(question, an1, an2, an3, an4, anIn);
-        quiz.add(newQuestion);
+    public void addQuestion(Question q) {
+        quiz.add(q);
         maxScore = quiz.size();
     }
 
