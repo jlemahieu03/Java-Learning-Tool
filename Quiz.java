@@ -69,7 +69,15 @@ public class Quiz {
                 playerScore++;
             } else {
                 ArrayList<String> answersCopy = q.getAnswers();
-                wrongQuestions.add(new Flashcard(q.getQuestion(), answersCopy.get(q.getAnswerIndex())));
+                boolean alreadyexists=false;
+                for (Flashcard flash:wrongQuestions){
+                    if (flash.front.equals(q.getQuestion())){
+                        alreadyexists=true;
+                    }
+                }
+                if (!alreadyexists) {
+                    wrongQuestions.add(new Flashcard(q.getQuestion(), answersCopy.get(q.getAnswerIndex())));
+                }
             }
         }
         //keyboard.close();
