@@ -15,5 +15,10 @@ Modules:
   - Pure and Impure Functions
 - Loops and Conditionals
   - If/Else/Elif statements (also discuss booleans more in depth)
-  - While loops 
+  - While loops (input validation)
   - For loops (iteration, enumerate, summation)
+- Extras if time:
+  - Modules
+  - Keywords
+  - Console/File I/O
+  - Exception Handling
