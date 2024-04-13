@@ -4,40 +4,25 @@ Repo for our group, Infinite Loop, for the UVM Hackathon
 ## Programming Language Learning Tool
 Modules:
 - Introduction
-  - What is Python?
-    - https://www.coursera.org/articles/what-is-python-used-for-a-beginners-guide-to-using-python
-  - Why Python?
-    - https://www.geeksforgeeks.org/python-language-advantages-applications/
+  - What is Java?
+    - https://www.w3schools.com/java/java_intro.asp
+  - Why Java?
+    - https://www.ibm.com/docs/en/aix/7.3?topic=monitoring-advantages-java
   - IDE suggestions & Hello World
-    - IDE Suggestions: Thonny, PyCharm, IDLE
-    - Thonny Link: https://thonny.org/
-    - PyCharm Link: https://www.jetbrains.com/pycharm/download/?section=windows
-    - IDLE Link: https://www.okdo.com/us/project/how-to-install-python-idle-ide-and-programme-the-gpio-on-the-rock-4c/
-    - Printing Hello World: https://www.geeksforgeeks.org/python-program-to-print-hello-world/
+    - IDE Suggestions: jGrasp, IntelliJ, VSCode
+    - Printing Hello World: https://www.geeksforgeeks.org/java-hello-world-program/
 - Data Types and Variables
   - Default Types, Strings, explain literals
-    - Default types: https://www.geeksforgeeks.org/python-data-types/
-    - Strings: https://www.w3schools.com/python/python_strings.asp
-    - Literals: https://www.geeksforgeeks.org/literals-in-python/
-  - Variables, expressions
-    - Variables: https://www.futurelearn.com/info/courses/introduction-to-programming-with-python-fourth-rev-/0/steps/264867#:~:text=Python%20variables%20are%20simply%20containers,containers%20for%20storing%20data%20values.
-    - Expressions: https://www.hackerearth.com/practice/python/working-with-data/expressions/tutorial/#:~:text=Python%20Expressions%3A,of%20the%20string%20as%20well.
+    - https://www.w3schools.com/java/java_data_types.asp
+  - Variables and expressions
+    - Variables: https://www.geeksforgeeks.org/variables-in-java/
   - Sequences (lists, tuples, mutability/immutability)
-    - Lists: https://www.w3schools.com/python/python_lists.asp
-    - Tuples: https://realpython.com/python-tuple/
-    - Mutability/Immutability: https://realpython.com/python-mutable-vs-immutable-types/
-- Functions
-  - Function definition: https://www.programiz.com/python-programming/function
-  - Passing Arguments to Functions: https://www.w3schools.com/python/gloss_python_function_arguments.asp
-  - Pure and Impure Functions: https://www.geeksforgeeks.org/functional-programming-pure-and-impure-functions/
+    - https://www.javatpoint.com/array-in-java
+- Methods and Classes
+  - Method definition: https://www.w3schools.com/java/java_methods.asp
+  - Main Function versus classes: https://www.w3schools.com/java/java_class_methods.asp
+  - Inheritance: https://www.geeksforgeeks.org/inheritance-in-java/
 - Loops and Conditionals
-  - If/Else/Elif statements (also discuss booleans more in depth): https://www.tutorialspoint.com/python/python_if_else.htm
-  - While loops (input validation): https://www.geeksforgeeks.org/python-while-loop/
-  - For loops (iteration, enumerate):
-    - Iteration: https://www.programiz.com/python-programming/for-loop
-    - Enumerate: https://www.geeksforgeeks.org/enumerate-in-python/
-- Extras if time:
-  - Modules
-  - Keywords
-  - Console/File I/O
-  - Exception Handling
+  - If/Else/Else If Statements: https://www.javatpoint.com/branching-statements-in-java#:~:text=Java%20has%20mainly%20three%20branching,used%20with%20the%20control%20statements.
+  - For Loops: https://www.w3schools.com/java/java_for_loop.asp
+  - While Loops: https://www.javatpoint.com/java-while-loop
