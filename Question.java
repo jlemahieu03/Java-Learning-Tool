@@ -21,11 +21,12 @@ public class Question {
     }
 
     public ArrayList<String> getAnswers(){
-        ArrayList<String> anCopy = new ArrayList<>();
-        for (String a: answers){
-            answers.add(a);
-        }
-        return anCopy;
+//        ArrayList<String> anCopy = new ArrayList<>();
+//        for (String a: answers){
+//            answers.add(a);
+//        }
+//        return anCopy;
+        return answers;
     }
 
     public int getAnswerIndex(){

@@ -47,6 +47,7 @@ public class Driver{
             if (choice.equals("1")) {
                 System.out.println("Module 1: ");
                 System.out.println(module1);
+                module1.getQuiz().takeQuiz();
             } else if (choice.equals("2")) {
                 System.out.println("Module 2: ");
             } else if (choice.equals("3")) {

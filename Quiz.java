@@ -11,6 +11,7 @@ public class Quiz {
 
     public Quiz() {
         quiz = new ArrayList<>();
+        wrongQuestions = new ArrayList<>();
         maxScore = quiz.size();
         playerScore = 0;
         percentageCorrect = 100;
