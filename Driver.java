@@ -1,24 +1,18 @@
 import java.util.Scanner;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import javax.imageio.ImageIO;
-import java.io.IOException;
-import java.io.File;
-import java.util.ArrayList;
+import java.io.*;
+import java.util.*;
 
 public class Driver{
-    public static void main(String [] args) throws IOException, InterruptedException {
+    public static void main(String [] args){
         learnJava();
     }
-    //learnJava
-    public static void learnJava() throws IOException, InterruptedException {
-        Module module1 = createModule(1);
-        Module module2 = createModule(2);
-        Module module3 = createModule(3);
-        Module module4 = createModule(4);
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("Welcome to the class! We will be learning Python today.");
+    public static void learnJava() {
+        Module module1=createModule(1);
+        Module module2=createModule(2);
+        Module module3=createModule(3);
+        Module module4=createModule(4);
+        Scanner keyboard;
+        System.out.println("Welcome to the class! We will be learning Java today.");
         boolean active = true;
         while (active) {
             boolean validInput = false;
@@ -26,13 +20,16 @@ public class Driver{
             //while loop
             while (!validInput) {
                 keyboard = new Scanner(System.in);
+                System.out.println("MAIN MENU:");
+                System.out.println("--------------------------------------------------------------------------------");
                 System.out.println("Enter (e) to exit the class tool.");
+                System.out.println("or");
                 System.out.println("Choose a module to start learning: ");
                 System.out.println("(1) for Module 1");
                 System.out.println("(2) for Module 2");
                 System.out.println("(3) for Module 3");
                 System.out.println("(4) for Module 4");
-                System.out.println("(5) to review Flashcards! (quiz questions you got wrong)");
+                System.out.println("(5) to review Flashcards!");
                 // Get user choice for the module
                 choice = keyboard.nextLine();
                 try {
@@ -52,13 +49,32 @@ public class Driver{
                 }
             } // Out of while validating loop
             if (choice.equals("1")) {
+                keyboard = new Scanner(System.in);
+                String moveOn = "";
                 System.out.println("Module 1: Introduction");
                 System.out.println("--------------------------------------------------------------------------------");
                 System.out.println(module1);
                 System.out.println("--------------------------------------------------------------------------------");
-                System.out.println("Module 1 Quiz:");
-                module1.getQuiz().takeQuiz();
-                displayGraph(module1, module2, module3, module4);
+                System.out.println("Ready for the Quiz? Enter (y) or (n)");
+                System.out.println("(y) to take the quiz");
+                System.out.println("(n) to go back to the MAIN MENU");
+                boolean cont = false;
+                while (!cont) {
+                    moveOn = keyboard.nextLine();
+                    if (moveOn.equals("y") || moveOn.equals("Y")) {
+                        cont = true;
+                    } else if (moveOn.equals("n") || moveOn.equals("N")) {
+                        cont = true;
+                    } else {
+                        System.out.println("Error: Please select one of the options.");
+                        System.out.println("Enter (y) to take the Module Quiz or (n) to go back to the Learning Module");
+                        moveOn = keyboard.nextLine();
+                    }
+                }
+                if (moveOn.equals("y") || moveOn.equals("Y")) {
+                    System.out.println("Module 1 Quiz:");
+                    module1.getQuiz().takeQuiz();
+                }
             } else if (choice.equals("2")) {
                 System.out.println("Module 2: Data Types and Variables");
                 System.out.println("--------------------------------------------------------------------------------");
@@ -66,7 +82,6 @@ public class Driver{
                 System.out.println("--------------------------------------------------------------------------------");
                 System.out.println("Module 2 Quiz:");
                 module2.getQuiz().takeQuiz();
-                displayGraph(module1, module2, module3, module4);
             } else if (choice.equals("3")) {
                 System.out.println("Module 3: Classes and Functions");
                 System.out.println("--------------------------------------------------------------------------------");
@@ -74,7 +89,6 @@ public class Driver{
                 System.out.println("--------------------------------------------------------------------------------");
                 System.out.println("Module 3 Quiz:");
                 module3.getQuiz().takeQuiz();
-                displayGraph(module1, module2, module3, module4);
             } else if (choice.equals("4")) {
                 System.out.println("Module 4: Loops and Conditionals");
                 System.out.println("--------------------------------------------------------------------------------");
@@ -82,7 +96,6 @@ public class Driver{
                 System.out.println("--------------------------------------------------------------------------------");
                 System.out.println("Module 4 Quiz:");
                 module4.getQuiz().takeQuiz();
-                displayGraph(module1, module2, module3, module4);
             }
             else if (choice.equals("5")) {
                 System.out.println("Flashcards: These are the questions you have gotten wrong on your quizzes");
@@ -116,9 +129,9 @@ public class Driver{
     }
     public static Module createModule(int num){
         if (num==1){
-            Chapter ch1=new Chapter("What is Java?",1,"https://www.w3schools.com/java/java_intro.asp",new String[]{"Java is a dynamic, easily accessible programming language","Java is free to download","Java is a compiled language"});
-            Chapter ch2=new Chapter("Why Java?",2,"https://www.ibm.com/docs/en/aix/7.3?topic=monitoring-advantages-java",new String[]{"Java is well-suited for object-oriented programming","Java is unique in the sense that it has platform independence (write once, run anywhere)","Object-oriented programming helps provide a clear program structure"});
-            Chapter ch3=new Chapter("IDE suggestions & Hello World",3,"https://www.geeksforgeeks.org/java-hello-world-program/", new String[]{"IDE SUGGESTIONS: jGrasp","IntelliJ","VSCode"});
+            Chapter ch1=new Chapter(1,"https://www.w3schools.com/java/java_intro.asp",new String[]{"Java is a dynamic, easily accessible programming language","Java is free to download","Java is a compiled language"});
+            Chapter ch2=new Chapter(2,"https://www.ibm.com/docs/en/aix/7.3?topic=monitoring-advantages-java",new String[]{"Java is well-suited for object-oriented programming","Java is unique in the sense that it has platform independence (write once, run anywhere)","Object-oriented programming helps provide a clear program structure"});
+            Chapter ch3=new Chapter(3,"https://www.geeksforgeeks.org/java-hello-world-program/", new String[]{"IDE SUGGESTIONS: jGrasp","IntelliJ","VSCode"});
 
             Quiz quiz=new Quiz();
 
@@ -132,9 +145,9 @@ public class Driver{
             return module1;
         }
         if(num==2){
-            Chapter ch1=new Chapter("Default Types, Strings, explain literals",1,"https://www.w3schools.com/java/java_data_types.asp",new String[]{"Java has several primitive data types which include byte, short, int, long, float, double, boolean, char","Java has several non-primitive data types which include Arrays, Strings, Classes, Interfaces, etc.","Primitive types are already defined in Java, whereas non-primitive types are made by the programmer"});
-            Chapter ch2=new Chapter("Variables, expressions",2,"https://www.geeksforgeeks.org/variables-in-java/",new String[]{"Variables are used to store data, which can then be used/manipulated in methods","An expression combines values, variables, operators, and methods to produce a single value","Types of expressions include arithmetic, relational, conditional, logical, and combinations of all four"});
-            Chapter ch3=new Chapter("Sequences (lists, tuples, mutability/immutability)",3,"https://www.javatpoint.com/array-in-java", new String[]{"Common types of sequences in Java include arrays and ArrayLists","These two sequences contain homogeneous data types","Arrays have a set length, while ArrayLists have dynamic lengths"});
+            Chapter ch1=new Chapter(1,"https://www.w3schools.com/java/java_data_types.asp",new String[]{"Java has several primitive data types which include byte, short, int, long, float, double, boolean, char","Java has several non-primitive data types which include Arrays, Strings, Classes, Interfaces, etc.","Primitive types are already defined in Java, whereas non-primitive types are made by the programmer"});
+            Chapter ch2=new Chapter(2,"https://www.geeksforgeeks.org/variables-in-java/",new String[]{"Variables are used to store data, which can then be used/manipulated in methods","An expression combines values, variables, operators, and methods to produce a single value","Types of expressions include arithmetic, relational, conditional, logical, and combinations of all four"});
+            Chapter ch3=new Chapter(3,"https://www.javatpoint.com/array-in-java", new String[]{"Common types of sequences in Java include arrays and ArrayLists","These two sequences contain homogeneous data types","Arrays have a set length, while ArrayLists have dynamic lengths"});
             Quiz quiz=new Quiz();
 
             quiz.addQuestion(new Question("\nWhat does the boolean data type represent in Java?","A: Whole numbers","B: Floating point numbers","C: True or false values", "D: Characters",2));
@@ -147,9 +160,9 @@ public class Driver{
             return module2;
         }
         if (num==3){
-            Chapter ch1=new Chapter("Function definition",1,"https://www.w3schools.com/java/java_methods.asp",new String[]{"Methods can make writing code more efficient because once written, they can be called as many times as needed","Methods can take parameters and return values","Methods can be overridden, which means that a method has the same header and parameters as another method, or they can be overloaded, which means that they have the same header but different parameters"});
-            Chapter ch2=new Chapter("Passing Arguments to Functions",2,"https://www.w3schools.com/java/java_class_methods.asp",new String[]{"Methods can be written in the driver class, or they can be written in specific classes that contain other specialized methods for objects of the class type","Static methods can be called without creating any instances of their class","Objects of the class that contains a specific method can access that method"});
-            Chapter ch3=new Chapter("Pure and Impure Functions",3,"https://www.geeksforgeeks.org/inheritance-in-java/", new String[]{"Java inheritance allows subclasses to use the methods in their parent class","Subclasses can override methods in their parent class in order to specialize the implementation of the method for objects of the subclass","You can create multiple levels of inheritance by using subclasses as superclasses for other classes"});
+            Chapter ch1=new Chapter(1,"https://www.w3schools.com/java/java_methods.asp",new String[]{"Methods can make writing code more efficient because once written, they can be called as many times as needed","Methods can take parameters and return values","Methods can be overridden, which means that a method has the same header and parameters as another method, or they can be overloaded, which means that they have the same header but different parameters"});
+            Chapter ch2=new Chapter(2,"https://www.w3schools.com/java/java_class_methods.asp",new String[]{"Methods can be written in the driver class, or they can be written in specific classes that contain other specialized methods for objects of the class type","Static methods can be called without creating any instances of their class","Objects of the class that contains a specific method can access that method"});
+            Chapter ch3=new Chapter(3,"https://www.geeksforgeeks.org/inheritance-in-java/", new String[]{"Java inheritance allows subclasses to use the methods in their parent class","Subclasses can override methods in their parent class in order to specialize the implementation of the method for objects of the subclass","You can create multiple levels of inheritance by using subclasses as superclasses for other classes"});
             Quiz quiz=new Quiz();
 
             quiz.addQuestion(new Question("\nWhat does the void keyword indicate in a method declaration?","A: The method returns a value","B: The method has no parameters","C: The method does not return a value", "D: The method is private",2));
@@ -163,9 +176,9 @@ public class Driver{
             return module3;
         }
         if(num==4){
-            Chapter ch1=new Chapter("If/Else/Elif statements",1,"https://www.w3schools.com/java/java_conditions.asp",new String[]{"If/Else statements enable the program to execute certain blocks of code based on a condition/conditions","The condition goes with the if/else if blocks, where else is meant to catch the remaining possibilities","The branches are checked in order, so as soon as the conditions for a branch are met, the body of the branch executes and then continues with the code following the conditional"});
-            Chapter ch2=new Chapter("While loops ",2,"https://www.w3schools.com/java/java_for_loop.asp",new String[]{"For loops are useful when the programmer knows exactly how many times they want a certain block of code to execute","The format is: for (initial statement; condition to be met; increment or decrement the initial statement)","The incrementation or decrementation occurs after the execution of the body of the for loop and before the next execution"});
-            Chapter ch3=new Chapter("For loops (iteration, enumerate, summation)",3,"https://www.javatpoint.com/java-while-loop", new String[]{"While loops execute as long as the condition of the loop is true","The condition is evaluated each time before the execution of the loop","While loops are very useful for input validation"});
+            Chapter ch1=new Chapter(1,"https://www.w3schools.com/java/java_conditions.asp",new String[]{"If/Else statements enable the program to execute certain blocks of code based on a condition/conditions","The condition goes with the if/else if blocks, where else is meant to catch the remaining possibilities","The branches are checked in order, so as soon as the conditions for a branch are met, the body of the branch executes and then continues with the code following the conditional"});
+            Chapter ch2=new Chapter(2,"https://www.w3schools.com/java/java_for_loop.asp",new String[]{"For loops are useful when the programmer knows exactly how many times they want a certain block of code to execute","The format is: for (initial statement; condition to be met; increment or decrement the initial statement)","The incrementation or decrementation occurs after the execution of the body of the for loop and before the next execution"});
+            Chapter ch3=new Chapter(3,"https://www.javatpoint.com/java-while-loop", new String[]{"While loops execute as long as the condition of the loop is true","The condition is evaluated each time before the execution of the loop","While loops are very useful for input validation"});
             Quiz quiz=new Quiz();
 
             quiz.addQuestion(new Question("\nWhat is the purpose of branching statements in Java?","A: To define functions","B: To store data","C: To perform certain actions", "D: To jump the flow of execution within a program",3));
@@ -180,63 +193,7 @@ public class Driver{
         return null;
     }
 
-    public static void displayGraph(Module module1, Module module2, Module module3, Module module4) throws IOException, InterruptedException{
-        // Sample percentage errors
-        // Sample percentage errors
-        String mod1percentError = String.valueOf(module1.getQuiz().getPercentageCorrect());
-        String mod2percentError = String.valueOf(module2.getQuiz().getPercentageCorrect());
-        String mod3percentError = String.valueOf(module3.getQuiz().getPercentageCorrect());
-        String mod4percentError = String.valueOf(module4.getQuiz().getPercentageCorrect());
-
-        // Command to call R script with percentage errors as arguments
-        String[] command = {"Rscript", "displayPercent.R", mod1percentError, mod2percentError, mod3percentError, mod4percentError};
-
-        // Start the process
-        ProcessBuilder pb = new ProcessBuilder(command);
-        Process process = pb.start();
-
-        // Wait for the process to finish
-        int exitCode = process.waitFor();
-        if (exitCode != 0) {
-            System.err.println("R script execution failed with exit code " + exitCode);
-            return;
-        }
-
-        // Read the image after the process has finished
-        File imageFile = new File("percent_graph.png");
-        BufferedImage image = ImageIO.read(imageFile);
-
-        // Create a JFrame to display the image
-        JFrame frame = new JFrame("Image Display");
-
-
-        // Create a JLabel to hold the image
-        JLabel label = new JLabel(new ImageIcon(image));
-
-        // Add the JLabel to the JFrame
-        frame.getContentPane().add(label, BorderLayout.CENTER);
-
-        frame.pack();
-
-        // Make the JFrame visible
-        frame.setVisible(true);
-
-        // Calculate the scale factors
-        double scaleX = (double)frame.getWidth() / image.getWidth();
-        double scaleY = (double)frame.getHeight() / image.getHeight();
-        double scale = Math.min(scaleX, scaleY);
-
-        // Scale the image
-        int scaledWidth = (int)(image.getWidth() * scale);
-        int scaledHeight = (int)(image.getHeight() * scale);
-        Image scaledImage = image.getScaledInstance(scaledWidth, scaledHeight, Image.SCALE_SMOOTH);
-
-        // Create a new ImageIcon with the scaled image
-        ImageIcon scaledIcon = new ImageIcon(scaledImage);
-
-        // Set the scaled ImageIcon to the JLabel
-        label.setIcon(scaledIcon);
+    public static void displayGraph(){
 
     }
-
 }

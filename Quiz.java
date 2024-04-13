@@ -59,7 +59,7 @@ public class Quiz {
     }
 
     private String displayResults() {
-        return String.format("You got %d/%d correct. Any questions you got incorrect will be availible for you to review in main menu", playerScore, maxScore);
+        return String.format("You got %d/%d correct. Any questions you got incorrect will be availible for you to review in the Main Menu", playerScore, maxScore);
 
     }
 
