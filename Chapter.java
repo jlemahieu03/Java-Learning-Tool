@@ -4,12 +4,14 @@ public class Chapter{
     private int chNum;
     private String link;
     private String[] keypoints;
+    private String title;
 
     //constructor
-    public Chapter(int chNum, String link,String[] keypoints){
+    public Chapter(String title,int chNum, String link,String[] keypoints){
         this.chNum=chNum;
         this.link=link;
         this.keypoints=keypoints;
+        this.title=title;
     }
     //getters
     public int getChNum(){
@@ -30,6 +32,6 @@ public class Chapter{
     }
     @Override
     public String toString(){
-        return String.format("Chapter %d:\nRead this: %s\nKeypoints from Chapter:\n1. %s\n2. %s\n3. %s\n",chNum,link,keypoints[0],keypoints[1],keypoints[2]);
+        return String.format("Chapter %d: %s\nRead this: %s\nKeypoints from Chapter:\n1. %s\n2. %s\n3. %s\n",chNum,title,link,keypoints[0],keypoints[1],keypoints[2]);
     }
 }
