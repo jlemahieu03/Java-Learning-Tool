@@ -4,6 +4,10 @@ import java.util.*;
 
 public class Driver{
     public static void main(String [] args){
+        Module module1=createModule(1);
+//        Module module2=createModule(2);
+//        Module module3=createModule(3);
+//        Module module4=createModule(4);
         learnPython();
     }
     public static void learnPython() {
@@ -49,5 +53,25 @@ public class Driver{
                 System.out.println("Module 4: ");
             }
         }
+    }
+    public static Module createModule(int num){
+        if (num==1){
+            Chapter ch1=new Chapter(1,"https://www.coursera.org/articles/what-is-python-used-for-a-beginners-guide-to-using-python",new String[3]);
+            Chapter ch2=new Chapter(2,"https://www.geeksforgeeks.org/python-language-advantages-applications/",new String[3]);
+            Chapter ch3=new Chapter(3,"https://www.geeksforgeeks.org/python-program-to-print-hello-world/",new String[] {"IDE suggestions: Thonny,Pycharm,IDLE","",""});
+            Quiz quiz=new Quiz();
+            quiz.addQuestion(new Question("What can Python be used for?","A: Data Science","B: Software and Web Development","C: Automation", "D: All of the above"));
+            Module module1=new Module(ch1,ch2,ch3,quiz);
+            return module1;
+        }
+//        if(num==2){
+//
+//        }
+//        if (num==3){
+//
+//        }
+//        if(num==4){
+//
+//        }
     }
 }
