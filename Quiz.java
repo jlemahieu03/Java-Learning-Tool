@@ -7,10 +7,13 @@ public class Quiz {
     private int playerScore;
     private ArrayList<Flashcard> wrongQuestions;
 
+    private double percentageCorrect;
+
     public Quiz() {
         quiz = new ArrayList<>();
         maxScore = quiz.size();
         playerScore = 0;
+        percentageCorrect = 100;
     }
 
     public ArrayList<Question> getQuiz() {
@@ -70,6 +73,7 @@ public class Quiz {
             }
         }
         keyboard.close();
+        percentageCorrect = (double) playerScore / maxScore;
         System.out.println(displayResults());
     }
 
