@@ -61,6 +61,7 @@ public class Quiz {
 
     public void takeQuiz() {
         Scanner keyboard = new Scanner(System.in);
+        playerScore=0;
         for (Question q:quiz){
             System.out.print(q + "\n");
             String userAnswer = validateAnswer(keyboard);
@@ -92,7 +93,7 @@ public class Quiz {
                 if (answer.equals("B") || answer.equals("b")){
                     break;
                 }
-                if (answer.equals("C") || answer.equals("b")){
+                if (answer.equals("C") || answer.equals("c")){
                     break;
                 }
                 if (answer.equals("D") || answer.equals("d")){
