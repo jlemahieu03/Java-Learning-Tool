@@ -37,7 +37,7 @@ public class Question {
         String s = "";
         s += question + "\n\n";
         for (String a:answers){
-            s += "A) " + a + '\n';
+            s += a + '\n';
         }
         return s;
     }
