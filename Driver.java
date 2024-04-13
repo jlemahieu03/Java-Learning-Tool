@@ -51,38 +51,88 @@ public class Driver{
 //                    choice = keyboard.nextLine();
                 }
             } // Out of while validating loop
+            boolean cont = false;
+            String moveOn = "";
             if (choice.equals("1")) {
                 System.out.println("Module 1: Introduction");
                 System.out.println("--------------------------------------------------------------------------------");
                 System.out.println(module1);
                 System.out.println("--------------------------------------------------------------------------------");
-                System.out.println("Module 1 Quiz:");
-                module1.getQuiz().takeQuiz();
-                displayGraph(module1, module2, module3, module4);
+                while (!cont) {
+                    System.out.println("Ready to take the Quiz? Enter (y) to take the quiz or (n) to go back to the Learning Modules");
+                    moveOn = keyboard.nextLine();
+                    if (moveOn.equals("y") || moveOn.equals("Y")) {
+                        System.out.println("Module 1 Quiz:");
+                        module1.getQuiz().takeQuiz();
+                        displayGraph(module1, module2, module3, module4);
+                        cont = true;
+                    } else if (moveOn.equals("n") || moveOn.equals("N")) {
+                        cont = true;
+                    } else {
+                        System.out.println("Error: Enter (y) or (n)");
+                        moveOn = keyboard.nextLine();
+                    }
+                }
             } else if (choice.equals("2")) {
                 System.out.println("Module 2: Data Types and Variables");
                 System.out.println("--------------------------------------------------------------------------------");
                 System.out.println(module2);
                 System.out.println("--------------------------------------------------------------------------------");
-                System.out.println("Module 2 Quiz:");
-                module2.getQuiz().takeQuiz();
-                displayGraph(module1, module2, module3, module4);
+                while (!cont) {
+                    System.out.println("Ready to take the Quiz? Enter (y) to take the quiz or (n) to go back to the Learning Modules");
+                    moveOn = keyboard.nextLine();
+                    if (moveOn.equals("y") || moveOn.equals("Y")) {
+                        System.out.println("Module 2 Quiz:");
+                        module2.getQuiz().takeQuiz();
+                        displayGraph(module1, module2, module3, module4);
+                        cont = true;
+                    } else if (moveOn.equals("n") || moveOn.equals("N")) {
+                        cont = true;
+                    } else {
+                        System.out.println("Error: Enter (y) or (n)");
+                        moveOn = keyboard.nextLine();
+                    }
+                }
             } else if (choice.equals("3")) {
                 System.out.println("Module 3: Methods and Classes");
                 System.out.println("--------------------------------------------------------------------------------");
                 System.out.println(module3);
                 System.out.println("--------------------------------------------------------------------------------");
-                System.out.println("Module 3 Quiz:");
-                module3.getQuiz().takeQuiz();
-                displayGraph(module1, module2, module3, module4);
+                while (!cont) {
+                    System.out.println("Ready to take the Quiz? Enter (y) to take the quiz or (n) to go back to the Learning Modules");
+                    moveOn = keyboard.nextLine();
+                    if (moveOn.equals("y") || moveOn.equals("Y")) {
+                        System.out.println("Module 3 Quiz:");
+                        module3.getQuiz().takeQuiz();
+                        displayGraph(module1, module2, module3, module4);
+                        cont = true;
+                    } else if (moveOn.equals("n") || moveOn.equals("N")) {
+                        cont = true;
+                    } else {
+                        System.out.println("Error: Enter (y) or (n)");
+                        moveOn = keyboard.nextLine();
+                    }
+                }
             } else if (choice.equals("4")) {
                 System.out.println("Module 4: Loops and Conditionals");
                 System.out.println("--------------------------------------------------------------------------------");
                 System.out.println(module4);
                 System.out.println("--------------------------------------------------------------------------------");
-                System.out.println("Module 4 Quiz:");
-                module4.getQuiz().takeQuiz();
-                displayGraph(module1, module2, module3, module4);
+                while (!cont) {
+                    System.out.println("Ready to take the Quiz? Enter (y) to take the quiz or (n) to go back to the Learning Modules");
+                    moveOn = keyboard.nextLine();
+                    if (moveOn.equals("y") || moveOn.equals("Y")) {
+                        System.out.println("Module 4 Quiz:");
+                        module4.getQuiz().takeQuiz();
+                        displayGraph(module1, module2, module3, module4);
+                        cont = true;
+                    } else if (moveOn.equals("n") || moveOn.equals("N")) {
+                        cont = true;
+                    } else {
+                        System.out.println("Error: Enter (y) or (n)");
+                        moveOn = keyboard.nextLine();
+                    }
+                }
             }
             else if (choice.equals("5")) {
                 System.out.println("Flashcards: These are the questions you have gotten wrong on your quizzes");
