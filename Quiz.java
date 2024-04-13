@@ -5,7 +5,7 @@ public class Quiz {
     private ArrayList<Question> quiz;
     private int maxScore;
     private int playerScore;
-    private ArrayList<Flashcards> wrongQuestions;
+    private ArrayList<Flashcard> wrongQuestions;
 
     public Quiz() {
         quiz = new ArrayList<>();
