@@ -23,6 +23,7 @@ public class Driver{
         while (active) {
             boolean validInput = false;
             String choice = "";
+            //while loop
             while (!validInput) {
                 keyboard = new Scanner(System.in);
                 System.out.println("Enter (e) to exit the class tool.");
