@@ -72,7 +72,7 @@ public class Quiz {
                 wrongQuestions.add(new Flashcard(q.getQuestion(), answersCopy.get(q.getAnswerIndex())));
             }
         }
-        keyboard.close();
+        //keyboard.close();
         percentageCorrect = (double) playerScore / maxScore;
         System.out.println(displayResults());
     }

@@ -42,8 +42,8 @@ public class Driver{
                         active = false;
                         validInput = true;
                     }
-                    System.out.println("Enter 1, 2, 3, or 4 to choose a Module or enter (e) to exit: ");
-                    choice = keyboard.nextLine();
+//                    System.out.println("Enter 1, 2, 3, or 4 to choose a Module or enter (e) to exit: ");
+//                    choice = keyboard.nextLine();
                 }
             } // Out of while validating loop
             if (choice.equals("1")) {
