@@ -95,9 +95,9 @@ public class Quiz {
             System.out.println("Enter your answer: ");
             answer = keyboard.nextLine();
             if (answer.isEmpty()){
-                System.out.println("No input. Please enter in A, B, C, or D");
+                System.out.println("Error: No input provided. Please enter in A, B, C, or D");
             } else if (answer.length() > 1){
-                System.out.println("Answer more than one character. Please enter in A, B, C, or D");
+                System.out.println("Error: Answer cannot be more than one character. Please enter in A, B, C, or D");
             } else {
                 if (answer.equals("A") || answer.equals("a")){
                     break;
