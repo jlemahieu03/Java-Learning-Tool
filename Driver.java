@@ -1,10 +1,8 @@
 import java.util.Scanner;
 import java.io.*;
 import java.util.*;
-
 public class Driver{
     public static void main(String [] args){
-
 //        Module module2=createModule(2);
 //        Module module3=createModule(3);
 //        Module module4=createModule(4);
@@ -19,7 +17,7 @@ public class Driver{
             boolean validInput = false;
             String choice = "";
             while (!validInput) {
-                System.out.println("Enter (e) at any point to exit.");
+                System.out.println("Enter (e) at any point to exit the module.");
                 System.out.println("Choose a module to start learning: ");
                 System.out.println("(1) for Module 1");
                 System.out.println("(2) for Module 2");
@@ -45,15 +43,15 @@ public class Driver{
                 }
             } // Out of while validating loop
             if (choice.equals("1")) {
-                System.out.println("Module 1: ");
+                System.out.println("Module 1: Introduction");
                 System.out.println(module1);
                 module1.getQuiz().takeQuiz();
             } else if (choice.equals("2")) {
-                System.out.println("Module 2: ");
+                System.out.println("Module 2: Data Types and Variables");
             } else if (choice.equals("3")) {
-                System.out.println("Module 3: ");
+                System.out.println("Module 3: Classes and Functions");
             } else if (choice.equals("4")) {
-                System.out.println("Module 4: ");
+                System.out.println("Module 4: Loops and Conditionals");
             }
         }
     }
@@ -78,7 +76,6 @@ public class Driver{
 //        }
         return null;
     }
-
     public static void displayGraph(){
 
     }
