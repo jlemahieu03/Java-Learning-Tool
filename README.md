@@ -3,8 +3,11 @@ Repo for our group, Infinite Loop, for the UVM Hackathon
 Modules:
 - Introduction
   - What is Python?
+    - https://www.coursera.org/articles/what-is-python-used-for-a-beginners-guide-to-using-python
   - Why Python?
+    - https://www.geeksforgeeks.org/python-language-advantages-applications/
   - IDE suggestions & Hello World
+    - 
 - Data Types and Variables
   - Default Types, Strings, explain literals
   - Variables, expressions
