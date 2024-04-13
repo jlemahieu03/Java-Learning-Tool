@@ -61,9 +61,9 @@ public class Driver{
     }
     public static Module createModule(int num){
         if (num==1){
-            Chapter ch1=new Chapter(1,"https://www.coursera.org/articles/what-is-python-used-for-a-beginners-guide-to-using-python",new String[3]);
-            Chapter ch2=new Chapter(2,"https://www.geeksforgeeks.org/python-language-advantages-applications/",new String[3]);
-            Chapter ch3=new Chapter(3,"https://www.geeksforgeeks.org/python-program-to-print-hello-world/", new String[3]);
+            Chapter ch1=new Chapter(1,"https://www.w3schools.com/java/java_intro.asp",new String[3]);
+            Chapter ch2=new Chapter(2,"https://www.ibm.com/docs/en/aix/7.3?topic=monitoring-advantages-java",new String[3]);
+            Chapter ch3=new Chapter(3,"https://www.geeksforgeeks.org/java-hello-world-program/", new String[3]);
 
             Quiz quiz=new Quiz();
 
@@ -76,15 +76,30 @@ public class Driver{
             Module module1=new Module(ch1,ch2,ch3,quiz);
             return module1;
         }
-//        if(num==2){
-//
-//        }
-//        if (num==3){
-//
-//        }
-//        if(num==4){
-//
-//        }
+        if(num==2){
+            Chapter ch1=new Chapter(1,"https://www.w3schools.com/java/java_data_types.asp",new String[3]);
+            Chapter ch2=new Chapter(2,"https://www.geeksforgeeks.org/variables-in-java/",new String[3]);
+            Chapter ch3=new Chapter(3,"https://www.javatpoint.com/array-in-java", new String[3]);
+            Quiz quiz=new Quiz();
+            Module module2=new Module(ch1,ch2,ch3,quiz);
+            return module2;
+        }
+        if (num==3){
+            Chapter ch1=new Chapter(1,"https://www.w3schools.com/java/java_methods.asp",new String[3]);
+            Chapter ch2=new Chapter(2,"https://www.w3schools.com/java/java_class_methods.asp",new String[3]);
+            Chapter ch3=new Chapter(3,"https://www.geeksforgeeks.org/inheritance-in-java/", new String[3]);
+            Quiz quiz=new Quiz();
+            Module module3=new Module(ch1,ch2,ch3,quiz);
+            return module3;
+        }
+        if(num==4){
+            Chapter ch1=new Chapter(1,"https://www.javatpoint.com/branching-statements-in-java#:~:text=Java%20has%20mainly%20three%20branching,used%20with%20the%20control%20statements",new String[3]);
+            Chapter ch2=new Chapter(2,"https://www.w3schools.com/java/java_for_loop.asp",new String[3]);
+            Chapter ch3=new Chapter(3,"https://www.javatpoint.com/java-while-loop", new String[3]);
+            Quiz quiz=new Quiz();
+            Module module4=new Module(ch1,ch2,ch3,quiz);
+            return module4;
+        }
         return null;
     }
 
