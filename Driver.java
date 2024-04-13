@@ -71,7 +71,7 @@ public class Driver{
             quiz.addQuestion(new Question("Which other programming languages are Java closely related to?","A: Python and Ruby","B: C++ and C#","C: JavaScript and PHP", "D: Swift and Kotlin",1));
             quiz.addQuestion(new Question("What is a big advantage of coding in Java?","A: Java is easy to learn","B: Java is object-oriented","C: Java is platform independent", "D: All of the above",3));
             quiz.addQuestion(new Question("What is the purpose of the public static void main(String[] args) signature in Java?","A: To define a constructor","B: To create an object","C: To specify the program’s entry point", "D: To handle exceptions",2));
-            quiz.addQuestion(new Question("What does the System.out.println(\"Hello, World\"); statement do in Java?","A: Prints \"Hello, World\" to the console","B: Declares a new class named “Hello, World”","C: Initializes a variable called “Hello, World”", "D: Throws an error",0));
+            quiz.addQuestion(new Question("What does the System.out.println(\"Hello, World\"); statement do in Java?","A: Prints \"Hello, World\" to the console","B: Declares a new class named \"Hello, World\"","C: Initializes a variable called \"Hello, World\"", "D: Throws an error",0));
 
             Module module1=new Module(ch1,ch2,ch3,quiz);
             return module1;
