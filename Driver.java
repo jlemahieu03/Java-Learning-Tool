@@ -20,7 +20,7 @@ public class Driver{
             String choice = "";
             while (!validInput) {
                 keyboard = new Scanner(System.in);
-                System.out.println("Enter (e) to exit the course.");
+                System.out.println("Enter (e) to exit the class tool.");
                 System.out.println("Choose a module to start learning: ");
                 System.out.println("(1) for Module 1");
                 System.out.println("(2) for Module 2");
