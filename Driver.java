@@ -32,7 +32,7 @@ public class Driver{
 
                 } else {
                     System.out.println("Enter 1, 2, 3, or 4 to choose a Module or enter (e) to exit: ");
-                    newChoice = keyboard.nextLine();
+                    choice = keyboard.nextLine();
                 }
 
             }
@@ -41,7 +41,7 @@ public class Driver{
                     System.exit(0);
                 }
                 System.out.println("Enter 1, 2, 3, or 4 to choose a Module or enter (e) to exit: ");
-                choice = keyboard.nextInt();
+                choice = keyboard.nextLine();
             }
         }
     }
