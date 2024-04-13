@@ -4,13 +4,14 @@ import java.util.*;
 
 public class Driver{
     public static void main(String [] args){
-        Module module1=createModule(1);
+
 //        Module module2=createModule(2);
 //        Module module3=createModule(3);
 //        Module module4=createModule(4);
         learnPython();
     }
     public static void learnPython() {
+        Module module1=createModule(1);
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Welcome to the class! We will be learning Python today.");
         boolean active = true;
@@ -45,6 +46,7 @@ public class Driver{
             } // Out of while validating loop
             if (choice.equals("1")) {
                 System.out.println("Module 1: ");
+                System.out.println(module1);
             } else if (choice.equals("2")) {
                 System.out.println("Module 2: ");
             } else if (choice.equals("3")) {
@@ -73,5 +75,6 @@ public class Driver{
 //        if(num==4){
 //
 //        }
+        return null;
     }
 }
