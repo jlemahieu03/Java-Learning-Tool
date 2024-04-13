@@ -34,16 +34,16 @@ public class Quiz {
     }
 
     private boolean isCorrectAnswer(String answer, Question ques) {
-        if ((answer == "A" || answer == "a") && ques.getAnswerIndex() == 0) {
+        if ((answer.equals("A") || answer.equals("a")) && ques.getAnswerIndex() == 0) {
             return true;
         }
-        if ((answer == "B" || answer == "b") && ques.getAnswerIndex() == 1) {
+        if ((answer.equals("B") || answer.equals("b")) && ques.getAnswerIndex() == 1) {
             return true;
         }
-        if ((answer == "C" || answer == "c") && ques.getAnswerIndex() == 2) {
+        if ((answer.equals("C") || answer.equals("c")) && ques.getAnswerIndex() == 2) {
             return true;
         }
-        if (((answer == "D" || answer == "d")) && ques.getAnswerIndex() == 3) {
+        if ((answer.equals("D") || answer.equals("d")) && ques.getAnswerIndex() == 3) {
             return true;
         }
         return false;
