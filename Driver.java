@@ -21,7 +21,7 @@ public class Driver{
             String choice = "";
             while (!validInput) {
                 keyboard = new Scanner(System.in);
-                System.out.println("Enter (e) at any point to exit.");
+                System.out.println("Enter (e) to exit the class.");
                 System.out.println("Choose a module to start learning: ");
                 System.out.println("(1) for Module 1");
                 System.out.println("(2) for Module 2");
@@ -32,15 +32,14 @@ public class Driver{
                 try {
                     int newChoice = Integer.parseInt(choice);
                     if (newChoice == 1 || newChoice == 2 || newChoice == 3 || newChoice == 4) {
-
                         validInput = true;
                     } else {
                         System.out.println("Invalid");
                     }
                 } catch (NumberFormatException e) {
-                    if (choice == "e") {
-                        active = false;
+                    if (choice.equals("e")) {
                         validInput = true;
+                        active = false;
                     }
 //                    System.out.println("Enter 1, 2, 3, or 4 to choose a Module or enter (e) to exit: ");
 //                    choice = keyboard.nextLine();
