@@ -15,18 +15,20 @@ public class Driver{
         System.out.println("Welcome to the class! We will be learning Java today.");
         boolean active = true;
         while (active) {
-
             boolean validInput = false;
             String choice = "";
             while (!validInput) {
                 keyboard = new Scanner(System.in);
+                System.out.println("MAIN MENU:");
+                System.out.println("--------------------------------------------------------------------------------");
                 System.out.println("Enter (e) to exit the class tool.");
+                System.out.println("or");
                 System.out.println("Choose a module to start learning: ");
                 System.out.println("(1) for Module 1");
                 System.out.println("(2) for Module 2");
                 System.out.println("(3) for Module 3");
                 System.out.println("(4) for Module 4");
-                System.out.println("(5) to review Flashcards! (quiz questions you got wrong)");
+                System.out.println("(5) to review Flashcards!");
                 // Get user choice for the module
                 choice = keyboard.nextLine();
                 try {
@@ -46,12 +48,32 @@ public class Driver{
                 }
             } // Out of while validating loop
             if (choice.equals("1")) {
+                keyboard = new Scanner(System.in);
+                String moveOn = "";
                 System.out.println("Module 1: Introduction");
                 System.out.println("--------------------------------------------------------------------------------");
                 System.out.println(module1);
                 System.out.println("--------------------------------------------------------------------------------");
-                System.out.println("Module 1 Quiz:");
-                module1.getQuiz().takeQuiz();
+                System.out.println("Ready for the Quiz? Enter (y) or (n)");
+                System.out.println("(y) to take the quiz");
+                System.out.println("(n) to go back to the MAIN MENU");
+                boolean cont = false;
+                while (!cont) {
+                    moveOn = keyboard.nextLine();
+                    if (moveOn.equals("y") || moveOn.equals("Y")) {
+                        cont = true;
+                    } else if (moveOn.equals("n") || moveOn.equals("N")) {
+                        cont = true;
+                    } else {
+                        System.out.println("Error: Please select one of the options.");
+                        System.out.println("Enter (y) to take the Module Quiz or (n) to go back to the Learning Module");
+                        moveOn = keyboard.nextLine();
+                    }
+                }
+                if (moveOn.equals("y") || moveOn.equals("Y")) {
+                    System.out.println("Module 1 Quiz:");
+                    module1.getQuiz().takeQuiz();
+                }
             } else if (choice.equals("2")) {
                 System.out.println("Module 2: Data Types and Variables");
                 System.out.println("--------------------------------------------------------------------------------");
