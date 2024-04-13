@@ -6,7 +6,7 @@ public class Module{
     private Quiz quiz;
 
     //constructor
-    public Module(Chapter ch1, Chapter c2, Chapter c3, Quiz quiz){
+    public Module(Chapter ch1, Chapter ch2, Chapter ch3, Quiz quiz){
         chapter1=ch1;
         chapter2=ch2;
         chapter3=ch3;
