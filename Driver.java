@@ -20,19 +20,19 @@ public class Driver{
             // Get user choice for the module
             String choice = keyboard.nextLine();
             try {
-                Integer.parseInt(choice);
+                int newChoice = Integer.parseInt(choice);
 
-                if (choice == 1) {
+                if (newChoice == 1) {
 
-                } else if (choice == 2) {
+                } else if (newChoice == 2) {
 
-                } else if (choice == 3) {
+                } else if (newChoice == 3) {
 
-                } else if (choice == 4){
+                } else if (newChoice == 4){
 
                 } else {
                     System.out.println("Enter 1, 2, 3, or 4 to choose a Module or enter (e) to exit: ");
-                    choice = keyboard.nextLine();
+                    newChoice = keyboard.nextLine();
                 }
 
             }
