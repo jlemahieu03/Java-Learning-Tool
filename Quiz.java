@@ -14,7 +14,12 @@ public class Quiz {
         wrongQuestions = new ArrayList<>();
         maxScore = quiz.size();
         playerScore = 0;
-        percentageCorrect = 100;
+        percentageCorrect = 0;
+        wrongQuestions = new ArrayList<>();
+    }
+
+    public double getPercentageCorrect(){
+        return percentageCorrect;
     }
 
     public ArrayList<Question> getQuiz() {
@@ -85,7 +90,7 @@ public class Quiz {
             }
         }
         //keyboard.close();
-        percentageCorrect = (double) playerScore / maxScore;
+        percentageCorrect = ((double) playerScore / (double) maxScore) * 100;
         System.out.println(displayResults());
     }
 

@@ -1,22 +1,26 @@
 import java.util.Scanner;
-import java.io.*;
-import java.util.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import javax.imageio.ImageIO;
+import java.io.IOException;
+import java.io.File;
+import java.util.ArrayList;
 
 public class Driver{
-    public static void main(String [] args){
+    public static void main(String [] args) throws IOException, InterruptedException {
         learnJava();
     }
     //learnJava
-    public static void learnJava() {
-        Module module1=createModule(1);
-        Module module2=createModule(2);
-        Module module3=createModule(3);
-        Module module4=createModule(4);
-        Scanner keyboard;
-        System.out.println("Welcome to the class! We will be learning Java today.");
+    public static void learnJava() throws IOException, InterruptedException {
+        Module module1 = createModule(1);
+        Module module2 = createModule(2);
+        Module module3 = createModule(3);
+        Module module4 = createModule(4);
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Welcome to the class! We will be learning Python today.");
         boolean active = true;
         while (active) {
-
             boolean validInput = false;
             String choice = "";
             while (!validInput) {
@@ -53,6 +57,7 @@ public class Driver{
                 System.out.println("--------------------------------------------------------------------------------");
                 System.out.println("Module 1 Quiz:");
                 module1.getQuiz().takeQuiz();
+                displayGraph(module1, module2, module3, module4);
             } else if (choice.equals("2")) {
                 System.out.println("Module 2: Data Types and Variables");
                 System.out.println("--------------------------------------------------------------------------------");
@@ -60,6 +65,7 @@ public class Driver{
                 System.out.println("--------------------------------------------------------------------------------");
                 System.out.println("Module 2 Quiz:");
                 module2.getQuiz().takeQuiz();
+                displayGraph(module1, module2, module3, module4);
             } else if (choice.equals("3")) {
                 System.out.println("Module 3: Classes and Functions");
                 System.out.println("--------------------------------------------------------------------------------");
@@ -67,6 +73,7 @@ public class Driver{
                 System.out.println("--------------------------------------------------------------------------------");
                 System.out.println("Module 3 Quiz:");
                 module3.getQuiz().takeQuiz();
+                displayGraph(module1, module2, module3, module4);
             } else if (choice.equals("4")) {
                 System.out.println("Module 4: Loops and Conditionals");
                 System.out.println("--------------------------------------------------------------------------------");
@@ -74,6 +81,7 @@ public class Driver{
                 System.out.println("--------------------------------------------------------------------------------");
                 System.out.println("Module 4 Quiz:");
                 module4.getQuiz().takeQuiz();
+                displayGraph(module1, module2, module3, module4);
             }
             else if (choice.equals("5")) {
                 System.out.println("Flashcards: These are the questions you have gotten wrong on your quizzes");
@@ -171,7 +179,63 @@ public class Driver{
         return null;
     }
 
-    public static void displayGraph(){
+    public static void displayGraph(Module module1, Module module2, Module module3, Module module4) throws IOException, InterruptedException{
+        // Sample percentage errors
+        // Sample percentage errors
+        String mod1percentError = String.valueOf(module1.getQuiz().getPercentageCorrect());
+        String mod2percentError = String.valueOf(module2.getQuiz().getPercentageCorrect());
+        String mod3percentError = String.valueOf(module3.getQuiz().getPercentageCorrect());
+        String mod4percentError = String.valueOf(module4.getQuiz().getPercentageCorrect());
+
+        // Command to call R script with percentage errors as arguments
+        String[] command = {"Rscript", "displayPercent.R", mod1percentError, mod2percentError, mod3percentError, mod4percentError};
+
+        // Start the process
+        ProcessBuilder pb = new ProcessBuilder(command);
+        Process process = pb.start();
+
+        // Wait for the process to finish
+        int exitCode = process.waitFor();
+        if (exitCode != 0) {
+            System.err.println("R script execution failed with exit code " + exitCode);
+            return;
+        }
+
+        // Read the image after the process has finished
+        File imageFile = new File("percent_graph.png");
+        BufferedImage image = ImageIO.read(imageFile);
+
+        // Create a JFrame to display the image
+        JFrame frame = new JFrame("Image Display");
+
+
+        // Create a JLabel to hold the image
+        JLabel label = new JLabel(new ImageIcon(image));
+
+        // Add the JLabel to the JFrame
+        frame.getContentPane().add(label, BorderLayout.CENTER);
+
+        frame.pack();
+
+        // Make the JFrame visible
+        frame.setVisible(true);
+
+        // Calculate the scale factors
+        double scaleX = (double)frame.getWidth() / image.getWidth();
+        double scaleY = (double)frame.getHeight() / image.getHeight();
+        double scale = Math.min(scaleX, scaleY);
+
+        // Scale the image
+        int scaledWidth = (int)(image.getWidth() * scale);
+        int scaledHeight = (int)(image.getHeight() * scale);
+        Image scaledImage = image.getScaledInstance(scaledWidth, scaledHeight, Image.SCALE_SMOOTH);
+
+        // Create a new ImageIcon with the scaled image
+        ImageIcon scaledIcon = new ImageIcon(scaledImage);
+
+        // Set the scaled ImageIcon to the JLabel
+        label.setIcon(scaledIcon);
 
     }
+
 }
