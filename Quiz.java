@@ -66,7 +66,7 @@ public class Quiz {
                 playerScore++;
             } else {
                 ArrayList<String> answersCopy = q.getAnswers();
-                wrongQuestions.add(new Flashcards(q.getQuestion(), answersCopy.get(q.getAnswerIndex())));
+                wrongQuestions.add(new Flashcard(q.getQuestion(), answersCopy.get(q.getAnswerIndex())));
             }
         }
         keyboard.close();
