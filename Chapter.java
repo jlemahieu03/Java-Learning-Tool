@@ -30,6 +30,6 @@ public class Chapter{
     }
     @Override
     public String toString(){
-        return String.format("Chapter %d:\nRead this: %s\nKeypoints from Chapter:\n1. %s\n2. %s\n3. %s",chNum,link,keypoints[0],keypoints[1],keypoints[2]);
+        return String.format("Chapter %d:\nRead this: %s\nKeypoints from Chapter:\n1. %s\n2. %s\n3. %s\n",chNum,link,keypoints[0],keypoints[1],keypoints[2]);
     }
 }

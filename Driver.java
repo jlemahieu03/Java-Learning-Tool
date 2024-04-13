@@ -46,21 +46,25 @@ public class Driver{
             } // Out of while validating loop
             if (choice.equals("1")) {
                 System.out.println("Module 1: Introduction");
+                System.out.println("----------------------");
                 System.out.println(module1);
                 System.out.println("Module 1 Quiz:");
                 module1.getQuiz().takeQuiz();
             } else if (choice.equals("2")) {
                 System.out.println("Module 2: Data Types and Variables");
+                System.out.println("----------------------------------");
                 System.out.println(module2);
                 System.out.println("Module 2 Quiz:");
                 module2.getQuiz().takeQuiz();
             } else if (choice.equals("3")) {
                 System.out.println("Module 3: Classes and Functions");
+                System.out.println("-------------------------------");
                 System.out.println(module3);
                 System.out.println("Module 3 Quiz:");
                 module3.getQuiz().takeQuiz();
             } else if (choice.equals("4")) {
                 System.out.println("Module 4: Loops and Conditionals");
+                System.out.println("--------------------------------");
                 System.out.println(module4);
                 System.out.println("Module 4 Quiz:");
                 module4.getQuiz().takeQuiz();
