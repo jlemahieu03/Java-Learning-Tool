@@ -21,7 +21,7 @@ public class Driver{
             String choice = "";
             while (!validInput) {
                 keyboard = new Scanner(System.in);
-                System.out.println("Enter (e) to exit the class.");
+                System.out.println("Enter (e) to exit the course.");
                 System.out.println("Choose a module to start learning: ");
                 System.out.println("(1) for Module 1");
                 System.out.println("(2) for Module 2");
@@ -46,16 +46,16 @@ public class Driver{
                 }
             } // Out of while validating loop
             if (choice.equals("1")) {
-                System.out.println("Module 1: ");
+                System.out.println("Module 1: Introduction");
                 System.out.println(module1);
                 System.out.println("Module 1 Quiz:");
                 module1.getQuiz().takeQuiz();
             } else if (choice.equals("2")) {
-                System.out.println("Module 2: ");
+                System.out.println("Module 2: Data Types and Variables");
             } else if (choice.equals("3")) {
-                System.out.println("Module 3: ");
+                System.out.println("Module 3: Classes and Functions");
             } else if (choice.equals("4")) {
-                System.out.println("Module 4: ");
+                System.out.println("Module 4: Loops and Conditionals");
             }
         }
     }
@@ -64,8 +64,15 @@ public class Driver{
             Chapter ch1=new Chapter(1,"https://www.coursera.org/articles/what-is-python-used-for-a-beginners-guide-to-using-python",new String[3]);
             Chapter ch2=new Chapter(2,"https://www.geeksforgeeks.org/python-language-advantages-applications/",new String[3]);
             Chapter ch3=new Chapter(3,"https://www.geeksforgeeks.org/python-program-to-print-hello-world/", new String[3]);
+
             Quiz quiz=new Quiz();
-            quiz.addQuestion(new Question("What can Python be used for?","A: Data Science","B: Software and Web Development","C: Automation", "D: All of the above",3));
+
+            quiz.addQuestion(new Question("What advantage does object-oriented programming (OOP) provide in Java?","A: Faster execution","B: Clear program structure","C: Longer development time", "D: No code reusability",1));
+            quiz.addQuestion(new Question("Which other programming languages are Java closely related to?","A: Python and Ruby","B: C++ and C#","C: JavaScript and PHP", "D: Swift and Kotlin",1));
+            quiz.addQuestion(new Question("What is a big advantage of coding in Java?","A: Java is easy to learn","B: Java is object-oriented","C: Java is platform independent", "D: All of the above",3));
+            quiz.addQuestion(new Question("What is the purpose of the public static void main(String[] args) signature in Java?","A: To define a constructor","B: To create an object","C: To specify the program’s entry point", "D: To handle exceptions",2));
+            quiz.addQuestion(new Question("What does the System.out.println(\"Hello, World\"); statement do in Java?","A: Prints “Hello, World” to the console","B: Declares a new class named “Hello, World”","C: Initializes a variable called “Hello, World”", "D: Throws an error",0));
+
             Module module1=new Module(ch1,ch2,ch3,quiz);
             return module1;
         }
