@@ -26,3 +26,6 @@ Modules:
   - If/Else/Else If Statements: https://www.w3schools.com/java/java_conditions.asp //this is the link that i changed!
   - For Loops: https://www.w3schools.com/java/java_for_loop.asp
   - While Loops: https://www.javatpoint.com/java-while-loop
+- Other Citations:
+  - https://codegym.cc/groups/posts/java-expressions-an-introduction-with-examples
+  - Gaddis, Tony. _Starting Out With Java: Control Structures Through Objects_. New York City, Pearson, 2021.
