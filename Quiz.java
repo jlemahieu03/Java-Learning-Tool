@@ -33,6 +33,10 @@ public class Quiz {
         return playerScore;
     }
 
+    public ArrayList<Flashcard> getWrongQuestions() {
+        return wrongQuestions;
+    }
+
     private boolean isCorrectAnswer(String answer, Question ques) {
         if ((answer.equals("A") || answer.equals("a")) && ques.getAnswerIndex() == 0) {
             return true;

@@ -26,11 +26,12 @@ public class Driver{
                 System.out.println("(2) for Module 2");
                 System.out.println("(3) for Module 3");
                 System.out.println("(4) for Module 4");
+                System.out.println("(5) to review Flashcards! (quiz questions you got wrong)");
                 // Get user choice for the module
                 choice = keyboard.nextLine();
                 try {
                     int newChoice = Integer.parseInt(choice);
-                    if (newChoice == 1 || newChoice == 2 || newChoice == 3 || newChoice == 4) {
+                    if (newChoice == 1 || newChoice == 2 || newChoice == 3 || newChoice == 4 || newChoice == 5) {
                         validInput = true;
                     } else {
                         System.out.println("Invalid");
@@ -64,6 +65,34 @@ public class Driver{
                 System.out.println(module4);
                 System.out.println("Module 4 Quiz:");
                 module4.getQuiz().takeQuiz();
+            }
+            else if (choice.equals("5")) {
+                System.out.println("Flashcards: These are the questions you have gotten wrong on your quizzes");
+                ArrayList<Flashcard> joined=new ArrayList<>();
+                for(int i=0; i<module1.getQuiz().getWrongQuestions().size(); i++){
+                    joined.add(module1.getQuiz().getWrongQuestions().get(i));
+                }
+                for(int i=0; i<module2.getQuiz().getWrongQuestions().size(); i++){
+                    joined.add(module2.getQuiz().getWrongQuestions().get(i));
+                }
+                for(int i=0; i<module3.getQuiz().getWrongQuestions().size(); i++){
+                    joined.add(module3.getQuiz().getWrongQuestions().get(i));
+                }
+                for(int i=0; i<module4.getQuiz().getWrongQuestions().size(); i++){
+                    joined.add(module4.getQuiz().getWrongQuestions().get(i));
+                }
+                if (joined.size()==0){
+                    System.out.println("No flashcards!");
+                }
+                else{
+                    System.out.println("Hit enter for answer!");
+                    keyboard = new Scanner(System.in);
+                    for(Flashcard flash: joined){
+                        System.out.println(flash.getFront());
+                        String enter=keyboard.nextLine();
+                        System.out.println(flash.getBack());
+                    }
+                }
             }
         }
     }
