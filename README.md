@@ -13,9 +13,9 @@ Ways this project could be expanded upon and made more comprehensive is:
   3. Expanding upon current learning content. Java is a comprehensive language and out lessons only scrape the surface of what cna be taught about the language. Adding more lessons and modules is definitely a possibility and something that would be easily implemented due to the OOP we implemented in this project.
 
 ### Credits
-Zoe Bell: [Linkedin](https://www.linkedin.com/in/zoe-bell-6a11aa258/), [GitHub](https://github.com/zeb25)
-James LeMahieu: [Linkedin](https://www.linkedin.com/in/james-lemahieu/), [GitHub](https://github.com/jlemahieu03)
-Lily Bonds: [Linkedin](https://www.linkedin.com/in/lily-bonds-539a6926a/), [GitHub](https://github.com/lilybonds)
+Zoe Bell: [Linkedin](https://www.linkedin.com/in/zoe-bell-6a11aa258/), [GitHub](https://github.com/zeb25)  
+James LeMahieu: [Linkedin](https://www.linkedin.com/in/james-lemahieu/), [GitHub](https://github.com/jlemahieu03)  
+Lily Bonds: [Linkedin](https://www.linkedin.com/in/lily-bonds-539a6926a/), [GitHub](https://github.com/lilybonds)  
 Darby Lane: [Linkedin](https://www.linkedin.com/in/darby-lane-3b97202b9/), [GitHub](https://github.com/dlane13)
   
 ### Code Citations
