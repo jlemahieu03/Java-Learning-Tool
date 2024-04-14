@@ -19,8 +19,8 @@ Lily Bonds: [Linkedin](https://www.linkedin.com/in/lily-bonds-539a6926a/), [GitH
 Darby Lane: [Linkedin](https://www.linkedin.com/in/darby-lane-3b97202b9/), [GitHub](https://github.com/dlane13)
   
 ### Code Citations
-All code was authored by the team memebrs, but inspiration and examples that proved helpful for the team are linked below.
-https://stackoverflow.com/questions/14353302/displaying-image-in-java
+All code was authored by the team memebrs, but inspiration and examples that proved helpful for the team are linked below.  
+https://stackoverflow.com/questions/14353302/displaying-image-in-java  
 https://stackoverflow.com/questions/8496494/running-command-line-in-java
 
 ### Lesson Plan Citations
